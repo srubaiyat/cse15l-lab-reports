@@ -15,3 +15,8 @@ I started off lab by setting up remote connection. First, I opened up the termin
 Now that I was logged into the remote server, I tried out some commands.
 
 <img width="655" alt="image" src="https://user-images.githubusercontent.com/122497388/212595997-1c20da2c-ce53-4337-9357-8e2832320d70.png">
+
+I first typed in "pwd", to print out the working directory, which was "/home/linux/ieng6/cs15lwi23/cs15lwi23adv". 
+I wanted to see if I could access another student's directory, so I typed in "cd .." to access the parent directory of all student directories "/home/linux/ieng6/cs15lwi23", and then typed in "ls cs15lwi23atj" to list the contents of the student directory "cs15lwi23atj". This was not possible, as I am not that student, and didn't have permissions to look at their directory. 
+Then I typed in "cd public" and "ls" to see what was in the one non-student directory. I saw there was no file named "hello.txt", so I wondered what would occur if I typed in  "cd hello.txt". In response, the terminal said "No such file or directory".
+
