@@ -1,4 +1,4 @@
-In the past couple labs, we worked on creating web servers and debugging code. This lab report will cover my StringServer, some failure-inducing input from lab 3, and what I've learned more generally from CSE15L so far. 
+In the past couple labs, we worked on creating web servers and debugging code. This lab report will cover my StringServer, some buggy code from lab 3, and what I've learned more generally from CSE15L so far. 
 
 ## Part 1: StringServer.java
 
@@ -63,11 +63,41 @@ class StringServer {
     }
 }
 ```
-<img width="427" alt="image" src="https://user-images.githubusercontent.com/122497388/215372612-0e178462-5d30-438d-ba48-5e64e70d1277.png">
-<img width="543" alt="image" src="https://user-images.githubusercontent.com/122497388/215372737-9532b453-3209-4260-8596-fa484edb02e8.png">
+When I run this on my own computer using `java StringServer 4000`, this code makes it such that:
+- when I visit [http://localhost:4000/](http://localhost:4000/), the page displays a list of strings that are in the instance variable `list`
+- when I visit [http://localhost:4000/add-message?s=string](http://localhost:4000/add-message?s=string) adds string to the end of `list`, and the page displays a list of strings that are in the instance variable `list`
+- when I visit [http://localhost:4000/anything-else](http://localhost:4000/anything-else), the page displays `404 Not Found`
+
+When I first open up the webpage, this is what it looks like.
+
+Then, if I visit [http://localhost:4000/add-message?s=Hello](http://localhost:4000/add-message?s=Hello), "Hello" is added to `list`, and this is what the page looks like.
+
+<img width="400" alt="image" src="https://user-images.githubusercontent.com/122497388/215372612-0e178462-5d30-438d-ba48-5e64e70d1277.png">
+
+Then, I can visit [http://localhost:4000/add-message?s=How are you](http://localhost:4000/add-message?s=How%are%you) to add another string "How are you" is added to `list`, and this is what the page looks like.
+
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/122497388/215372737-9532b453-3209-4260-8596-fa484edb02e8.png">
 
 ## Part 2: Lab 3 Bugs
 
+ In Lab 3, we were given some buggy code at [https://github.com/ucsd-cse15l-w23/lab3](https://github.com/ucsd-cse15l-w23/lab3). My favorite was the method  `static int[] reversed(int[] arr)` in [ArrayExamples.java](https://github.com/ucsd-cse15l-w23/lab3/blob/main/ArrayExamples.java). 
  
+ ```
+  static int[] reversed(int[] arr) {
+    int[] newArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = newArray[arr.length - i - 1];
+    }
+    return arr;
+  }
+ ```
+ 
+ At first glance, it seems to approach the problem exactly as I would. It initializes a `newArray` of the same length, iterates through `arr`, and makes sure the item at `newArray[arr.length-i-1]` is the same as `arr[i]`. 
+ However, the first red flag is seemingly that it returns `arr`, not `newArray`, so it'd return the non-reversed array, even if `newArray` was the perfect reversed array.
+ Moreover, I realized in the for loop, `arr` is on the left side of the assignment operator (=). Therefore, what happens is that `newArray` is set to an array of 0s as a default value, so `arr` is set to an array of 0s, and `arr` is returned. Thus, regardless of what `arr` is given, an array of all 0s is returned. 
+ 
+ A non-failure inducing input was given in [ArrayTests.java](https://github.com/ucsd-cse15l-w23/lab3/blob/main/ArrayTests.java): `ArrayExamples.reversed(new int[]{ })`.Since there are no elements, the for loop doesn't run, and the original array is returned. Since the array is empty, it's palindromic, and the original array is the reversed array.
+ 
+ A failure inducing input would be `ArrayExamples.reversed(new int[]{1, 2, 3, 4})`. It would return `{0, 0, 0, 0}', not '{4,3,2,1}'.
 
 ## Part 3: What I Learned
