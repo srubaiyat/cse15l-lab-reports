@@ -70,13 +70,15 @@ When I run this on my own computer using `java StringServer 4000`, this code mak
 
 When I first open up the webpage, this is what it looks like.
 
+<img width="508" alt="image" src="https://user-images.githubusercontent.com/122497388/215607804-a9a1a9db-243b-439f-aa4f-ee7da6ff7f41.png">
+
 Then, if I visit [http://localhost:4000/add-message?s=Hello](http://localhost:4000/add-message?s=Hello), "Hello" is added to `list`, and this is what the page looks like.
 
-<img width="400" alt="image" src="https://user-images.githubusercontent.com/122497388/215372612-0e178462-5d30-438d-ba48-5e64e70d1277.png">
+<img width="475" alt="image" src="https://user-images.githubusercontent.com/122497388/215607244-e02f8a46-416e-4570-aca6-e3c70a018cea.png">
 
 Then, I can visit [http://localhost:4000/add-message?s=How are you](http://localhost:4000/add-message?s=How%are%you) to add another string "How are you" is added to `list`, and this is what the page looks like.
 
-<img width="500" alt="image" src="https://user-images.githubusercontent.com/122497388/215372737-9532b453-3209-4260-8596-fa484edb02e8.png">
+<img width="588" alt="image" src="https://user-images.githubusercontent.com/122497388/215607486-15bd514a-2146-40ac-ae7e-95943c36eb33.png">
 
 ## Part 2: Lab 3 Bugs
 
@@ -98,6 +100,9 @@ Then, I can visit [http://localhost:4000/add-message?s=How are you](http://local
  
  A non-failure inducing input was given in [ArrayTests.java](https://github.com/ucsd-cse15l-w23/lab3/blob/main/ArrayTests.java): `ArrayExamples.reversed(new int[]{ })`.Since there are no elements, the for loop doesn't run, and the original array is returned. Since the array is empty, it's palindromic, and the original array is the reversed array.
  
- A failure inducing input would be `ArrayExamples.reversed(new int[]{1, 2, 3, 4})`. It would return `{0, 0, 0, 0}', not '{4,3,2,1}'.
+ A failure inducing input would be `ArrayExamples.reversed(new int[]{1, 2, 3, 4})`. It would return '{0, 0, 0, 0}', not '{4,3,2,1}'.
 
 ## Part 3: What I Learned
+
+I learned how to host things on localhost using URLHandler with a port number. Priorly, I knew HTML and JavaScript, but had no way of seeing cumulative results for my programming like I can see in java. I will revisit my JavaScript notes and google how to get similar results from a prettier User Interface, using JavaScript tools instead of `System.out.print()`.
+
