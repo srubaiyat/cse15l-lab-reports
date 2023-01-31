@@ -68,17 +68,23 @@ When I run this on my own computer using `java StringServer 4000`, this code mak
 - when I visit [http://localhost:4000/add-message?s=string](http://localhost:4000/add-message?s=string) adds string to the end of `list`, and the page displays a list of strings that are in the instance variable `list`
 - when I visit [http://localhost:4000/anything-else](http://localhost:4000/anything-else), the page displays `404 Not Found`
 
-When I first open up the webpage, this is what it looks like.
+When I first open up the webpage, this is what it looks like. 
 
 <img width="508" alt="image" src="https://user-images.githubusercontent.com/122497388/215607804-a9a1a9db-243b-439f-aa4f-ee7da6ff7f41.png">
 
-Then, if I visit [http://localhost:4000/add-message?s=Hello](http://localhost:4000/add-message?s=Hello), "Hello" is added to `list`, and this is what the page looks like.
+In this screenshot, `handleRequest(http://localhost:4000/)` is called. No fields are changed by this request, and the webpage doesn't display anything because `list` does not have any elements at this time. 
+
+Then, if I visit [http://localhost:4000/add-message?s=Hello](http://localhost:4000/add-message?s=Hello), this is what the page looks like.
 
 <img width="475" alt="image" src="https://user-images.githubusercontent.com/122497388/215607244-e02f8a46-416e-4570-aca6-e3c70a018cea.png">
 
-Then, I can visit [http://localhost:4000/add-message?s=How are you](http://localhost:4000/add-message?s=How%are%you) to add another string "How are you" is added to `list`, and this is what the page looks like.
+In this screenshot, `handleRequest(http://localhost:4000/add-message?s=Hello)` is called. "Hello" is appended to `list` as a result. The webpage now displays "Hello" because `list` only has the element "Hello". 
+
+Finally, I visited [http://localhost:4000/add-message?s=How are you](http://localhost:4000/add-message?s=How%are%you), and this is what the page looked like.
 
 <img width="588" alt="image" src="https://user-images.githubusercontent.com/122497388/215607486-15bd514a-2146-40ac-ae7e-95943c36eb33.png">
+
+In this screenshot, `handleRequest(http://localhost:4000/add-message?s=How are you)` is called, so "How are you" is appended to `list`. The webpage now displays "Hello" and "How are you" because `list` now has two elements: "Hello" and "How are you". 
 
 ## Part 2: Lab 3 Bugs
 
@@ -105,4 +111,3 @@ Then, I can visit [http://localhost:4000/add-message?s=How are you](http://local
 ## Part 3: What I Learned
 
 I learned how to host things on localhost using URLHandler with a port number. Priorly, I knew HTML and JavaScript, but had no way of seeing cumulative results for my programming like I can see in java. I will revisit my JavaScript notes and google how to get similar results from a prettier User Interface, using JavaScript tools instead of `System.out.print()`.
-
