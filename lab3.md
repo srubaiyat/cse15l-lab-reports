@@ -12,7 +12,7 @@ To do a case-insensitive search, `grep -i "phrase" file` can be used.
 This allows a much more accurate search in the cases where a word could be capitalized at the beginning of a sentence perhaps.
 
 # grep -R
-`grep -R "phrase" file` can be used to search for a phrase in the working directory and all its subdirectories.
+`grep -R "phrase" ` can be used to search for a phrase in the working directory and all its subdirectories.
 
 <img width="791" alt="image" src="https://user-images.githubusercontent.com/122497388/218667644-04ecf6ff-c73f-498d-a8d1-ade4e992f293.png">
 
