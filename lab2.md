@@ -104,9 +104,44 @@ In this screenshot, `handleRequest(http://localhost:4000/add-message?s=How are y
  However, the first red flag is seemingly that it returns `arr`, not `newArray`, so it'd return the non-reversed array, even if `newArray` was the perfect reversed array.
  Moreover, I realized in the for loop, `arr` is on the left side of the assignment operator (=). Therefore, what happens is that `newArray` is set to an array of 0s as a default value, so `arr` is set to an array of 0s, and `arr` is returned. Thus, regardless of what `arr` is given, an array of all 0s is returned. 
  
- A non-failure inducing input was given in [ArrayTests.java](https://github.com/ucsd-cse15l-w23/lab3/blob/main/ArrayTests.java): `ArrayExamples.reversed(new int[]{ })`.Since there are no elements, the for loop doesn't run, and the original array is returned. Since the array is empty, it's palindromic, and the original array is the reversed array.
+ To fix the bug, I changed the code to what is below.
  
- A failure inducing input would be `ArrayExamples.reversed(new int[]{1, 2, 3, 4})`. It would return '{0, 0, 0, 0}', not '{4,3,2,1}'.
+  
+ ```
+  static int[] reversed(int[] arr) {
+    int[] newArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+      newArray[arr.length - i - 1] = arr[i];
+    }
+    return newArray;
+  }
+ ```
+ 
+ This assigns the elements in `newArray` to the reversed positions in  `arr` and returns `newArray`.
+ 
+ A non-failure inducing input was given in [ArrayTests.java](https://github.com/ucsd-cse15l-w23/lab3/blob/main/ArrayTests.java): 
+ ```
+ @Test
+  public void testReversed() {
+    int[] input1 = { };
+    assertArrayEquals(new int[]{ }, ArrayExamples.reversed(input1));
+  }
+ ```
+ 
+ Since there are no elements, the for loop doesn't run, and the original array is returned. Since the array is empty, it's palindromic, and the original array is the reversed array.
+ 
+ A failure inducing input would be:
+ ```
+ @Test
+  public void testReversed2() {
+    int[] input1 = new int[]{1, 2, 3, 4};
+    assertArrayEquals(new int[]{4,3,2,1}, ArrayExamples.reversed(input1));
+  }
+ ```
+ When the JUnit test is compiled and run, the output is as follows.
+ <img width="773" alt="image" src="https://user-images.githubusercontent.com/122497388/218641631-e5be7b3c-79c9-4b19-af10-497ad5672505.png">
+
+This is because `ArrayExamples.reversed(input1)` returns '{0, 0, 0, 0}', not '{4,3,2,1}'. This is a result of the reversed assignment operation in the for loop.
 
 ## Part 3: What I Learned
 
