@@ -1,4 +1,6 @@
-This lab report will explore the different command line options for the bash command `grep`. `grep` (in the most basic terms) returns all lines in a file containing a phrase. For example, if I want to search written_2/travel_guides for "short holiday", I can use grep to discover Mallorca is the place to be.
+This lab report will explore the different command line options for the bash command `grep`. My main source for this was [Vivek Gite's article on 'How To Use grep Command In Linux / UNIX With Practical Examples'](https://www.cyberciti.biz/faq/howto-use-grep-command-in-linux-unix/).
+
+`grep` (in the most basic terms) returns all lines in a file containing a phrase. For example, if I want to search written_2/travel_guides for "short holiday", I can use grep to discover Mallorca is the place to be.
 
 <img width="769" alt="image" src="https://user-images.githubusercontent.com/122497388/218662897-c3aab578-ab6e-420b-81a3-98c0fde3477f.png">
 
@@ -34,5 +36,7 @@ This can be useful, especially if the phrase appears several times in a line.
 `grep -w "phrase" file` can be used to search for an exactly matched phrase of full words. 
 
 <img width="796" alt="image" src="https://user-images.githubusercontent.com/122497388/218671232-d9da5965-8376-4cae-a484-f3de23653738.png">
+
+<img width="789" alt="image" src="https://user-images.githubusercontent.com/122497388/221390330-98572054-65d0-4822-b408-8289672b09ce.png">
 
 This is useful for a more specific search for an exact phrase, when you don't want to count other tenses or forms of the first and last words.
