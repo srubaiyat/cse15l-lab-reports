@@ -19,7 +19,7 @@ The output displayed was as below.
 
 # 7. Edit the code file to fix the failing test
 
-I typed `nano L<tab>.java` to open ListExamples.java in nano. I pressed the <down> and <right> keys until I got to line 43 and changed line 43 from "index1 += 1;" to "index2 += 1;". I then pressed `<^O><enter><^X>` to save and exit the file. 
+I typed `nano L<tab>.java` to open ListExamples.java in nano. I pressed the `<down>` and `<right>` keys until I got to line 43 and changed line 43 from "index1 += 1;" to "index2 += 1;". I then pressed `<^O><enter><^X>` to save and exit the file. 
   
 # 8. Run the tests, demonstrating that they now succeed
  
