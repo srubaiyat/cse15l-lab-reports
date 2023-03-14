@@ -1,7 +1,7 @@
 In this lab report, I will recreate how I got my 1:18 time in the CSE Labs Done Quick Tournament.
 
 As in the [Github and Login Command-Line Setup](https://ucsd-cse15l-w23.github.io/week/week7/#github-and-login-command-line-setup), I set up ssh keys to log into my ieng6 account and push code to github quickly.
-In preparation, I did the whole lab once before in preparation, so the commands would be stored in the terminal and easily accessed by pressing the <up> keys. Then I removed the directory by running `rm -rf lab7` and then typed `exit` to log out of ieng6. I also deleted the existing fork of the repository, and then created a new fork.
+In preparation, I did the whole lab once before in preparation, so the commands would be stored in the terminal and easily accessed by pressing the `<up>` keys. Then I removed the directory by running `rm -rf lab7` and then typed `exit` to log out of ieng6. I also deleted the existing fork of the repository, and then created a new fork.
 
 # 4. Log into ieng6
   
