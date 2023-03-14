@@ -38,7 +38,7 @@ The output displayed was as below.
   
 # 9. Commit and push the resulting change to your Github account
  
-I typed `git add L<tab>.java` to indicate `ListExamples.java` should be part of the next commit. I typed `git commit -m "c"` to commit ListExamples.java. I then typed `git push origin main` to push the changed file to github. 
+I typed `git add L<tab>.java` to indicate `ListExamples.java` should be part of the next commit. I typed `git commit -m "c"` to commit `ListExamples.java`. I then typed `git push origin main` to push the changed file to github. 
 
 <img width="508" alt="image" src="https://user-images.githubusercontent.com/122497388/224872659-fd8a65d4-669f-4769-9465-3bb3202e7808.png">
 
