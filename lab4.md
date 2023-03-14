@@ -11,7 +11,7 @@ The `ssh cs15lwi23adv@ieng6.ucsd.edu` command was the last command I ran before 
  
 # 5. Clone your fork of the repository from your Github account
   
-The `git clone git@github.com:srubaiyat/lab7.git` command was the first command I ran after entering into ieng6, so I pressed `<up><up><up><up><up><up><up><up><up><up><up><up><enter>`(`<up>` 12 times and then `<enter>`) to run it. This created a directory called lab7 in the home directory of `cs15lwi23adv@ieng6.ucsd.edu`, so I typed `cd lab7`. 
+The `git clone git@github.com:srubaiyat/lab7.git` command was the first command I ran after entering into ieng6, so I pressed `<up><up><up><up><up><up><up><up><up><up><up><up><enter>`(`<up>` 12 times and then `<enter>`) to run it. This created a directory called `lab7` in the home directory of `cs15lwi23adv@ieng6.ucsd.edu` with the contents of the forked/cloned repository, so I typed `cd lab7`. 
 
 <img width="538" alt="image" src="https://user-images.githubusercontent.com/122497388/224871784-6aafaf57-b65d-4850-97c4-2df3eaa806ff.png">
  
