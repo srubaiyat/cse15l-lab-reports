@@ -17,7 +17,7 @@ The `git clone git@github.com:srubaiyat/lab7.git` command was the first command 
  
 # 6. Run the tests, demonstrating that they fail
   
-The `javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java` and `java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests` commands were 7 commands up, so I pressed `<up><up><up><up><up><up><up><enter><up><up><up><up><up><up><up><enter>`(<up> 7 times and then enter, and again) to run them.
+The `javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java` and `java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests` commands were 7 commands up, so I pressed `<up><up><up><up><up><up><up><enter><up><up><up><up><up><up><up><enter>`(`<up>` 7 times and then `<enter>`, and again) to run them.
 The output displayed was as below.
   
 <img width="1041" alt="image" src="https://user-images.githubusercontent.com/122497388/221401292-d150b4a8-8f45-4285-80f4-afa26adccd7d.png">
