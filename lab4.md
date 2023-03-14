@@ -24,9 +24,9 @@ The output displayed was as below.
 
 # 7. Edit the code file to fix the failing test
 
-I typed `nano L<tab>.java` to open ListExamples.java in nano. I pressed the `<down>` and `<right>` keys until I got to line 43 and changed line 43 from "index1 += 1;" to "index2 += 1;". I then pressed `<^O><enter><^X>` to save and exit the file. 
+I typed `nano L<tab>.java` to open `ListExamples.java` in nano. I pressed the `<down>` and `<right>` keys until I got to line 43 and changed line 43 from `index1 += 1;` to `index2 += 1;`. I then pressed `<^O><enter><^X>` to save and exit the file. 
   
-  <img width="432" alt="image" src="https://user-images.githubusercontent.com/122497388/224872219-ab1653e5-195c-4aa6-91c3-e7871570113b.png">
+ <img width="432" alt="image" src="https://user-images.githubusercontent.com/122497388/224872219-ab1653e5-195c-4aa6-91c3-e7871570113b.png">
 
  <img width="400" alt="image" src="https://user-images.githubusercontent.com/122497388/224872148-195fa700-38e1-45b1-9a26-3652b786c645.png">
 
@@ -38,7 +38,7 @@ The output displayed was as below.
   
 # 9. Commit and push the resulting change to your Github account
  
-I typed `git add L<tab>.java` to indicate ListExamples.java should be part of the next commit. I typed `git commit -m "c"` to commit ListExamples.java. I then typed `git push origin main` to push the changed file to github. 
+I typed `git add L<tab>.java` to indicate `ListExamples.java` should be part of the next commit. I typed `git commit -m "c"` to commit ListExamples.java. I then typed `git push origin main` to push the changed file to github. 
 
 <img width="508" alt="image" src="https://user-images.githubusercontent.com/122497388/224872659-fd8a65d4-669f-4769-9465-3bb3202e7808.png">
 
